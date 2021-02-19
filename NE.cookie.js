@@ -8,9 +8,8 @@
   访问京东APP内嵌了H5页面：后台杀京东APP后再进入或进首页的免费水果都可获取
   ^https?://un\.m\.jd\.com/cgi-bin/app/appjmp url script-request-header NE.cookie.js
 
-  ^https?://api\.m\.jd\.com/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header NE.cookie.js
-  复制 https://home.m.jd.com/myJd/newhome.action 到浏览器打开 ，在个人中心自动获取 cookie，没成功就试试刷新页面
-  ^https?://wq\.jd\.com/user_new/info/GetJDUserInfoUnion url script-request-header NE.cookie.js
+  复制 https://bean.m.jd.com/bean/signIndex.action 或 https://home.m.jd.com/myJd/newhome.action 地址到浏览器打开，登录后可自动获取Cookie，没成功就登录后再次访问下之前复制的地址
+  ^https?://api\.m\.jd\.com/client\.action\?functionId=(signBeanIndex|signBeanGroupStageIndex|trade_config) url script-request-header NE.cookie.js
 
 快手Cookie：
   hostname = nebula.kuaishou.com, *.gifshow.com, *.ksapisrv.com
